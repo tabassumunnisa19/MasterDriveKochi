@@ -213,38 +213,35 @@ color:#ccc;
 /* REVIEWS */
 
 .reviews{
-padding:80px 60px;
+overflow:hidden;
+padding:60px 0;
 }
 
-.reviews h2{
-text-align:center;
-margin-bottom:40px;
-color:#ff2a7f;
-}
-
-.review-grid{
+.review-container{
 display:flex;
-gap:25px;
-max-width:1100px;
-margin:auto;
+gap:30px;
+width:max-content;
+animation: scrollReviews 25s linear infinite;
 }
 
-.review{
+.review-card{
 background:#111;
-padding:25px;
-border-radius:12px;
-flex:1;
+padding:20px;
+border-radius:10px;
+min-width:280px;
+box-shadow:0 0 10px rgba(0,0,0,0.6);
 }
 
-.stars{
-color:#f4c430;
-margin-bottom:10px;
+@keyframes scrollReviews{
+
+0%{
+transform:translateX(0);
 }
 
-.review span{
-display:block;
-margin-top:10px;
-color:#aaa;
+100%{
+transform:translateX(-50%);
+}
+
 }
 
 
