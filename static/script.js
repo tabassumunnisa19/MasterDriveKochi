@@ -84,35 +84,30 @@ font-size:14px;
 }
 // ================= STATS COUNTER =================
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
 const counters = document.querySelectorAll(".counter");
 
 counters.forEach(counter => {
 
-let target = +counter.getAttribute("data-target");
+const target = +counter.getAttribute("data-target");
 let count = 0;
 
-let speed = target / 100;
+const updateCounter = () => {
 
-function updateCount(){
-
-count += speed;
+const increment = target / 100;
 
 if(count < target){
-
+count += increment;
 counter.innerText = Math.ceil(count);
-requestAnimationFrame(updateCount);
-
+requestAnimationFrame(updateCounter);
 }else{
-
 counter.innerText = target;
-
 }
 
-}
+};
 
-updateCount();
+updateCounter();
 
 });
 
