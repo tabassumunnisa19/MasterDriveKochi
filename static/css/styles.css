@@ -467,6 +467,54 @@ border-radius:10px;
 max-width:550px;
 }
 
+.reviews{
+padding:70px 0;
+overflow:hidden;
+text-align:center;
+}
+
+.review-wrapper{
+overflow:hidden;
+width:100%;
+}
+
+.review-container{
+display:flex;
+gap:25px;
+width:max-content;
+animation: scrollReviews 35s linear infinite;
+}
+
+.review-card{
+background:#111;
+padding:20px;
+border-radius:12px;
+min-width:260px;
+box-shadow:0 0 10px rgba(0,0,0,0.6);
+}
+
+.review-card p{
+margin:10px 0;
+color:#ccc;
+}
+
+.review-card span{
+color:#f4c430;
+font-size:14px;
+}
+
+@keyframes scrollReviews{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
 
 
 
