@@ -1,68 +1,36 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ================= HERO SECTION ================= -->
+<title>{{ title }}</title>
 
-<section class="hero">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
-<div class="hero-container">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<div class="hero-image">
-<img src="{{ url_for('static', filename='images/hero.png') }}" alt="Driving Instructor">
-</div>
+</head>
 
-<div class="hero-text">
+<body>
 
-<h1>Master the Art of Safe Driving</h1>
-<h2>Build Real Road Confidence</h2>
+<!-- ================= HEADER ================= -->
 
-<p>
-One-on-one premium driving mentorship designed to help beginners and hesitant drivers gain real road confidence with calm structured coaching.
-</p>
+<header class="header">
 
-<div class="hero-buttons">
+<div class="header-container">
 
-<a href="https://wa.me/917994065904" class="primary-btn">
-Book a Session
-</a>
+<div class="logo">
 
-<a href="https://wa.me/917994065904" class="secondary-btn">
-WhatsApp Now
-</a>
+<img src="{{ url_for('static', filename='images/logo.png') }}" alt="MasterDrive Kochi Logo">
+
+<span>MasterDrive Kochi</span>
 
 </div>
 
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= STATS ================= -->
-
-<section class="stats">
-
-<div class="stat-item">
-<h3>100+</h3>
-<p>Students Trained</p>
-</div>
-
-<div class="stat-item">
-<h3>5+</h3>
-<p>Years Experience</p>
-</div>
-
-<div class="stat-item">
-<h3>99%</h3>
-<p>First Attempt Success</p>
-</div>
-
-</section>
-
-
-{% endblock %}Book Now
+<a href="https://wa.me/917994065904" class="book-btn">
+Book Now
 </a>
 
 </div>
@@ -72,50 +40,13 @@ WhatsApp Now
 
 <!-- ================= PAGE CONTENT ================= -->
 
-{% block content %}
-
-{% endblock %}
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-<p>
-Address: Vyttila, Kochi
-</p>
-
-<div class="social">
-
-<a href="#">Instagram</a>
-<a href="#">Facebook</a>
-<a href="#">YouTube</a>
-
-</div>
-
-<p>
-© MasterDrive Kochi
-</p>
-
-</footer>
-
-
-<script src="{{ url_for('static', filename='script.js') }}"></script>
-
-</body>
-
-</html></a>
-
-</div>
-
-</header>
-
-
-<!-- ================= PAGE CONTENT ================= -->
+<main>
 
 {% block content %}
 
 {% endblock %}
+
+</main>
 
 
 <!-- ================= CHATBOT ================= -->
@@ -138,7 +69,9 @@ I can help you with pricing, instructor details, address, session procedure and 
 
 </div>
 
-<input id="chat-input" type="text" placeholder="Ask something like price, instructor, address...">
+<input id="chat-input"
+type="text"
+placeholder="Ask something like price, instructor, address...">
 
 </div>
 
