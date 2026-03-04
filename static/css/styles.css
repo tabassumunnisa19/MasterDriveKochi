@@ -888,5 +888,17 @@ font-family:'Poppins', sans-serif;
     color: #ccc;
     line-height: 1.6;
 }
+/* FEATURES */
 
+.features {
+    padding-top: 20px;   /* reduce space above */
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.features h2 {
+    color: #f4c430;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
 
