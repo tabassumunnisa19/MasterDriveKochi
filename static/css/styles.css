@@ -428,7 +428,47 @@ padding:6px;
 border:none;
 margin-top:8px;
 }
+/* HEADER */
 
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:black;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:bold;
+color:#D4AF37;
+font-size:20px;
+}
+
+.logo img{
+height:40px;
+}
+
+
+/* HERO SECTION */
+
+.hero-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px 60px;
+}
+
+.hero-image img{
+width:420px;
+border-radius:10px;
+}
+
+.hero-text{
+max-width:550px;
+}
 
 
 
