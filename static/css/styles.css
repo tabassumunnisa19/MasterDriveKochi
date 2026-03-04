@@ -869,4 +869,24 @@ transform:translateX(-50%);
 
 font-family:'Poppins', sans-serif;
 
+/* INSTRUCTOR SECTION */
+
+.instructor {
+    text-align: center;
+    padding: 60px 20px 30px 20px;   /* reduced bottom padding */
+}
+
+.instructor h2 {
+    color: #ff2a7f;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.instructor p {
+    max-width: 850px;
+    margin: 10px auto;
+    color: #ccc;
+    line-height: 1.6;
+}
+
 
