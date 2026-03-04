@@ -82,3 +82,38 @@ color:#ff2a7f;
 text-decoration:none;
 font-size:14px;
 }
+// ================= STATS COUNTER =================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+let target = +counter.getAttribute("data-target");
+let count = 0;
+
+let speed = target / 100;
+
+function updateCount(){
+
+count += speed;
+
+if(count < target){
+
+counter.innerText = Math.ceil(count);
+requestAnimationFrame(updateCount);
+
+}else{
+
+counter.innerText = target;
+
+}
+
+}
+
+updateCount();
+
+});
+
+});
