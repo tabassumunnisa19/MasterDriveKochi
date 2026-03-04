@@ -346,21 +346,31 @@ border-top:1px solid #333;
 /* ================= FOOTER ================= */
 
 footer{
-padding:40px 20px;
+background:#111;
 text-align:center;
-border-top:1px solid #111;
-background:#000;
+padding:25px 20px;
+margin-top:40px;
+}
+
+.footer-container{
+max-width:900px;
+margin:auto;
+}
+
+.footer-container p{
+margin:6px 0;
+color:#bbb;
 }
 
 .social{
-margin:15px 0;
+margin-top:8px;
 }
 
 .social a{
 margin:0 10px;
-text-decoration:none;
 color:#ff2a7f;
-font-size:14px;
+text-decoration:none;
+font-weight:500;
 }
 
 .social a:hover{
@@ -960,5 +970,17 @@ color:#fff;
 padding:10px 22px;
 border-radius:25px;
 text-decoration:none;
+font-weight:600;
+}
+
+.whatsapp-btn{
+display:block;
+margin:30px auto;
+background:#ff2a7f;
+color:#fff;
+padding:12px 28px;
+border-radius:25px;
+text-decoration:none;
+width:fit-content;
 font-weight:600;
 }
