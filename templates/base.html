@@ -1,40 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
+{% block content %}
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ================= HERO SECTION ================= -->
 
-<title>MasterDrive Kochi</title>
+<section class="hero">
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+<div class="hero-container">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<div class="hero-image">
+<img src="{{ url_for('static', filename='images/hero.png') }}" alt="Driving Instructor">
+</div>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<div class="hero-text">
 
-</head>
+<h1>Master the Art of Safe Driving</h1>
+<h2>Build Real Road Confidence</h2>
 
-<body>
+<p>
+One-on-one premium driving mentorship designed to help beginners and hesitant drivers gain real road confidence with calm structured coaching.
+</p>
 
-<!-- ================= HEADER ================= -->
+<div class="hero-buttons">
 
-<header>
+<a href="https://wa.me/917994065904" class="primary-btn">
+Book a Session
+</a>
 
-<div class="navbar">
-
-<div class="logo">
-
-<img src="{{ url_for('static', filename='images/logo.png') }}" alt="MasterDrive Logo">
-
-<span>MasterDrive Kochi</span>
+<a href="https://wa.me/917994065904" class="secondary-btn">
+WhatsApp Now
+</a>
 
 </div>
 
-<a class="book-btn" href="https://wa.me/917994065904" target="_blank">
-Book Now
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+<div class="stat-item">
+<h3>100+</h3>
+<p>Students Trained</p>
+</div>
+
+<div class="stat-item">
+<h3>5+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-item">
+<h3>99%</h3>
+<p>First Attempt Success</p>
+</div>
+
+</section>
+
+
+{% endblock %}Book Now
 </a>
 
 </div>
