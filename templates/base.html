@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>{{ title }}</title>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-
 <header class="header">
-
-<div class="logo">
-MasterDrive Kochi
-</div>
+<div class="logo">MasterDrive Kochi</div>
 
 <a href="https://wa.me/917994065904" class="book-btn">
 Book Now
 </a>
-
 </header>
 
 
-{% block content %}
-{% endblock %}
+<!-- PAGE CONTENT -->
+{% block content %}{% endblock %}
 
 
 <footer>
@@ -39,11 +31,9 @@ Book Now
 <p>Address: Vyttila, Kochi</p>
 
 <div class="social">
-
 <a href="#">Instagram</a>
 <a href="#">Facebook</a>
 <a href="#">YouTube</a>
-
 </div>
 
 <p>© MasterDrive Kochi</p>
@@ -52,130 +42,6 @@ Book Now
 
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
-
-</body>
-</html>        </div>
-    </nav>
-
-    <div class="pt-24">
-        {% block content %}{% endblock %}
-    </div>
-
-    <!-- ================= FLOATING CHATBOT ================= -->
-
-    <div class="fixed bottom-6 right-6 z-50">
-
-        <button onclick="toggleChat()"
-            class="bg-[#FF2E88] w-16 h-16 rounded-full shadow-xl text-white text-2xl flex items-center justify-center">
-            💬
-        </button>
-
-        <div id="chat-window"
-            class="hidden mt-4 w-80 bg-[#111] rounded-xl shadow-2xl p-4 border border-[#D4AF37]/20">
-
-            <h3 class="text-center font-semibold text-[#D4AF37] mb-2">
-                GoodDrive AI Assistant
-            </h3>
-
-            <div id="chat-box"
-                class="h-48 overflow-y-auto text-sm mb-3 text-gray-300 space-y-2"></div>
-
-            <input type="text"
-                id="user-input"
-                placeholder="Ask about price, address, instructor..."
-                class="w-full p-2 rounded bg-[#1a1a1a] text-white border border-gray-700 text-sm">
-
-            <button onclick="sendMessage()"
-                class="mt-2 w-full bg-[#D4AF37] text-black py-2 rounded font-semibold hover:opacity-90">
-                Send
-            </button>
-
-            <a href="https://wa.me/919947444475"
-               target="_blank"
-               class="block mt-3 text-center text-[#FF2E88] underline text-sm">
-               Chat directly on WhatsApp
-            </a>
-
-        </div>
-    </div>
-
-    <!-- ================= CHATBOT SCRIPT ================= -->
-
-    <script>
-
-        let firstOpen = true;
-
-        function toggleChat() {
-            const chatWindow = document.getElementById("chat-window");
-            chatWindow.classList.toggle("hidden");
-
-            const chatBox = document.getElementById("chat-box");
-
-            if (firstOpen && !chatWindow.classList.contains("hidden")) {
-                chatBox.innerHTML += `
-                <div class="text-[#FF2E88]">
-                    <strong>GoodDrive AI:</strong> 
-                    Hi 👋 Welcome to Good Drive. 
-                    I can help you with pricing, instructor details, address, session procedure and booking.
-                </div>`;
-                firstOpen = false;
-            }
-        }
-
-        function sendMessage() {
-            const inputField = document.getElementById("user-input");
-            const input = inputField.value.toLowerCase().trim();
-            const chatBox = document.getElementById("chat-box");
-
-            if (!input) return;
-
-            let response = "";
-
-            if (input.includes("hi") || input.includes("hello")) {
-                response = "Hi 👋 This is Good Drive. Ask me about pricing, instructor Yaseen, address, or session procedure.";
-            }
-
-            else if (input.includes("price") || input.includes("cost") || input.includes("fee")) {
-                response = "Pricing: ₹600 per hour OR ₹15000 monthly package.";
-            }
-
-            else if (input.includes("address") || input.includes("location") || input.includes("where")) {
-                response = "Address: Karimakkad, Thrikkakara, Edappally, Ernakulam, Kochi, Kerala 682021.";
-            }
-
-            else if (input.includes("instructor") || input.includes("yaseen")) {
-                response = "Instructor Yaseen has 5+ years experience and has trained 200+ drivers successfully.";
-            }
-
-            else if (input.includes("procedure") || input.includes("session") || input.includes("how")) {
-                response = "Procedure: You share your home location. Instructor Yaseen will come to your home, pick you up, conduct the driving session, and drop you back safely.";
-            }
-
-            else if (input.includes("book") || input.includes("schedule")) {
-                response = "Please click the Book Now button above or use WhatsApp to confirm your session.";
-            }
-
-            else {
-                response = "For detailed assistance, please use the WhatsApp link below.";
-            }
-
-            chatBox.innerHTML += `<div><strong>You:</strong> ${input}</div>`;
-            chatBox.innerHTML += `<div class="text-[#FF2E88]"><strong>GoodDrive AI:</strong> ${response}</div>`;
-
-            inputField.value = "";
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("user-input").addEventListener("keypress", function (event) {
-                if (event.key === "Enter") {
-                    event.preventDefault();
-                    sendMessage();
-                }
-            });
-        });
-
-    </script>
 
 </body>
 </html>
