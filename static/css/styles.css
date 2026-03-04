@@ -369,6 +369,66 @@ html {
 .delay-200 { animation-delay: 0.2s; }
 .delay-400 { animation-delay: 0.4s; }
 
+/* CHATBOT */
+
+.chat-button{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#ff2a7f;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+cursor:pointer;
+z-index:1000;
+}
+
+.chat-box{
+position:fixed;
+bottom:100px;
+right:30px;
+width:260px;
+background:#111;
+border-radius:10px;
+padding:10px;
+display:none;
+z-index:1000;
+}
+
+.chat-header{
+font-weight:bold;
+margin-bottom:8px;
+}
+
+.chat-messages{
+max-height:200px;
+overflow-y:auto;
+font-size:14px;
+}
+
+.user{
+text-align:right;
+color:#ff2a7f;
+margin:5px 0;
+}
+
+.bot{
+color:#ccc;
+margin:5px 0;
+}
+
+#chatInput{
+width:100%;
+padding:6px;
+border:none;
+margin-top:8px;
+}
+
 
 
 
