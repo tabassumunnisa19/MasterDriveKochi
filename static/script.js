@@ -1,91 +1,84 @@
-// MasterDrive Kochi Rule-Based Chatbot
+/* ================= CHAT BUTTON ================= */
 
-document.addEventListener("DOMContentLoaded", function(){
-
-const chatBtn = document.createElement("div")
-chatBtn.className = "chat-button"
-chatBtn.innerHTML = "💬"
-document.body.appendChild(chatBtn)
-
-const chatBox = document.createElement("div")
-chatBox.className = "chat-box"
-
-chatBox.innerHTML = `
-<div class="chat-header">MasterDriveKochiAI</div>
-
-<div class="chat-messages" id="chatMessages">
-
-<p class="bot">
-Hi 👋 Welcome to <b>MasterDrive Kochi</b>.<br>
-I can help you with:<br>
-• pricing<br>
-• instructor details<br>
-• address<br>
-• session procedure<br>
-• booking
-</p>
-
-</div>
-
-<input id="chatInput" placeholder="Ask something..." />
-
-<div class="chat-footer">
-<a href="https://wa.me/917994065904" target="_blank">
-Book on WhatsApp
-</a>
-</div>
-`
-
-document.body.appendChild(chatBox)
-
-chatBtn.onclick = () => {
-
-chatBox.style.display =
-chatBox.style.display === "block" ? "none" : "block"
-
+.chat-button{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ff2a7f;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+cursor:pointer;
+box-shadow:0 0 15px rgba(255,42,127,0.6);
+z-index:1000;
 }
 
-const input = document.getElementById("chatInput")
 
-input.addEventListener("keypress", function(e){
+/* ================= CHAT BOX ================= */
 
-if(e.key === "Enter"){
-
-let msg = input.value.toLowerCase()
-let messages = document.getElementById("chatMessages")
-
-messages.innerHTML += `<p class="user">${msg}</p>`
-
-let reply = "Please contact us on WhatsApp for detailed assistance."
-
-if(msg.includes("price") || msg.includes("cost") || msg.includes("fee")){
-reply = "Each session costs ₹499 and the duration is 1 hour."
+.chat-box{
+position:fixed;
+bottom:90px;
+right:20px;
+width:280px;
+background:#0f0f0f;
+border-radius:12px;
+display:none;
+overflow:hidden;
+box-shadow:0 0 25px rgba(255,42,127,0.4);
+z-index:1000;
 }
 
-else if(msg.includes("instructor") || msg.includes("teacher")){
-reply = "Your instructor is <b>Mr. Niyad</b>. He has 5+ years experience and has trained 100+ drivers successfully."
+.chat-header{
+background:#ff2a7f;
+padding:12px;
+font-weight:bold;
+text-align:center;
 }
 
-else if(msg.includes("address") || msg.includes("location") || msg.includes("where")){
-reply = "We operate in <b>Vyttila, Kochi</b> and nearby areas including Kakkanad, Aluva and Edappally."
+.chat-messages{
+height:220px;
+overflow-y:auto;
+padding:10px;
+font-size:14px;
 }
 
-else if(msg.includes("procedure") || msg.includes("session") || msg.includes("how")){
-reply = "Procedure: Share your home location. Instructor Niyad will come to your location, conduct the driving session and drop you back safely."
+.bot{
+background:#1a1a1a;
+padding:8px;
+border-radius:6px;
+margin-bottom:8px;
 }
 
-else if(msg.includes("book") || msg.includes("booking")){
-reply = "To book a session, click the WhatsApp button below."
+.user{
+background:#ff2a7f;
+padding:8px;
+border-radius:6px;
+margin-bottom:8px;
+text-align:right;
 }
 
-messages.innerHTML += `<p class="bot">${reply}</p>`
-
-input.value = ""
-
-messages.scrollTop = messages.scrollHeight
-
+#chatInput{
+width:100%;
+border:none;
+outline:none;
+padding:10px;
+background:#111;
+color:#fff;
 }
 
-})
+.chat-footer{
+text-align:center;
+padding:10px;
+background:#000;
+}
 
-})
+.chat-footer a{
+color:#ff2a7f;
+text-decoration:none;
+font-size:14px;
+}
