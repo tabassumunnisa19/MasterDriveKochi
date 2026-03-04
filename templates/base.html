@@ -1,6 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MasterDrive Kochi</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
 <header>
+
+<div class="navbar">
+
+<div class="logo">
+
+<img src="{{ url_for('static', filename='images/logo.png') }}" alt="MasterDrive Logo">
+
+<span>MasterDrive Kochi</span>
+
+</div>
+
+<a class="book-btn" href="https://wa.me/917994065904" target="_blank">
+Book Now
+</a>
+
+</div>
+
+</header>
+
+
+<!-- ================= PAGE CONTENT ================= -->
+
+{% block content %}
+
+{% endblock %}
+
+
+<!-- ================= CHATBOT ================= -->
+
+<div id="chatbot">
+
+<div id="chat-header">
+MasterDriveKochiAI
+</div>
+
+<div id="chat-body">
+
+<div class="bot-message">
+Hi 👋 Welcome to MasterDrive Kochi.
+</div>
+
+<div class="bot-message">
+I can help you with pricing, instructor details, address, session procedure and booking.
+</div>
+
+</div>
+
+<input id="chat-input" type="text" placeholder="Ask something like price, instructor, address...">
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
-<p>Address: Vyttila, Kochi</p>
+
+<div class="footer-container">
+
+<p class="address">
+📍 Address: Vyttila, Kochi
+</p>
 
 <div class="social">
 
@@ -10,12 +91,19 @@
 
 </div>
 
-<p>© MasterDrive Kochi</p>
+<p class="copyright">
+© MasterDrive Kochi
+</p>
+
+</div>
 
 </footer>
 
 
+<!-- ================= JAVASCRIPT ================= -->
+
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
+
 </html>
