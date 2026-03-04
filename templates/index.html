@@ -1,288 +1,250 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- ================= HERO SECTION ================= -->
-<section class="bg-black py-6 md:py-10">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+<head>
 
-    <!-- LEFT IMAGE -->
-    <div>
-      <img src="/static/images/hero.png"
-           alt="Driving Training"
-           loading="lazy"
-           class="w-full h-[500px] md:h-[550px] object-cover object-center rounded-2xl shadow-xl">
-    </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- RIGHT CONTENT -->
-    <div class="text-white">
+<title>MasterDriveKochi</title>
 
-      <h1 class="text-4xl md:text-6xl font-bold leading-tight">
-        Drive Without Fear.<br>
-        <span class="text-[#FF2E88]">Build Real Road Confidence.</span>
-      </h1>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
-      <p class="mt-6 text-lg text-gray-300">
-        Personalized driving coaching by Instructor <strong>Yaseen</strong> in Ernakulam.
-      </p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a href="https://wa.me/919947444475?text=Hi%20I%20want%20to%20book%20a%20driving%20session"
-           target="_blank"
-           class="bg-[#D4AF37] text-black px-8 py-3 rounded-full font-semibold shadow-lg">
-          Book a Session
-        </a>
+</head>
 
-        <a href="https://wa.me/919947444475"
-           target="_blank"
-           class="border border-[#FF2E88] text-[#FF2E88] px-8 py-3 rounded-full font-semibold hover:bg-[#FF2E88] hover:text-white transition duration-300">
-          WhatsApp Now
-        </a>
-      </div>
+<body>
 
-    </div>
-  </div>
-</section>
+<header class="header">
+
+<div class="logo">
+MasterDrive Kochi
+</div>
+
+<a href="https://wa.me/917994065904" class="book-btn">
+Book Now
+</a>
+
+</header>
 
 
-<!-- ================= ABOUT INSTRUCTOR ================= -->
-<section class="bg-[#0B0B0F] py-16">
-  <div class="max-w-6xl mx-auto px-6">
+<section class="hero">
 
-    <div class="bg-[#111111] rounded-3xl p-10 md:p-16 shadow-2xl border border-[#1f1f1f]">
+<div class="hero-container">
 
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-10 text-white">
-        About <span class="text-[#FF2E88]">Instructor</span>
-      </h2>
+<div class="hero-image">
+<img src="{{ url_for('static', filename='images/logo.png') }}" alt="Instructor">
+</div>
 
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="hero-text">
 
-        <div>
-          <p class="text-gray-300 text-lg mb-6">
-            I’m Yaseen, an Automobile Engineer and professional driving instructor specializing in driving anxiety and hypnotic driving training.
-          </p>
+<h1>Master the Art of Safe Driving</h1>
 
-          <p class="text-gray-300 mb-6">
-            This unique technique, combined with years of practical instruction experience, helps learners overcome fear and gain real road confidence.
-          </p>
+<h2>Build Real Road Confidence</h2>
 
-          <p class="text-gray-300 mb-8">
-            Good Drive is a personalized driving training service based in Ernakulam, offering calm, structured and confidence-building instruction.
-          </p>
+<p>
+One-on-one premium driving mentorship designed to help beginners and hesitant drivers gain real road confidence with calm structured coaching.
+</p>
 
-          <ul class="text-gray-300 space-y-3">
-            <li>✔ One-on-one training in your own vehicle</li>
-            <li>✔ Flexible timings: 7 AM – 6 PM</li>
-            <li>✔ Home pickup & drop facility</li>
-            <li>✔ Coverage: Vyttila, Kakkanad, Aluva, Edappally & nearby areas</li>
-          </ul>
+<div class="hero-buttons">
 
-        </div>
+<a href="https://wa.me/917994065904" class="btn-primary">
+Book a Session
+</a>
 
-        <div class="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] p-8 rounded-2xl border border-[#2a2a2a]">
-          <h3 class="text-xl font-semibold text-[#FF2E88] mb-4">
-            Overcome Driving Anxiety
-          </h3>
-          <p class="text-gray-400 leading-relaxed">
-            Many people believe driving fear cannot be fixed. With the right guidance and calm structured approach, confidence can return quickly — sometimes within a single session.
-          </p>
-        </div>
+<a href="https://wa.me/917994065904" class="btn-outline">
+WhatsApp Now
+</a>
 
-      </div>
-    </div>
+</div>
 
-  </div>
+</div>
+
+</div>
+
 </section>
 
 
 
+<section class="stats">
 
+<div class="stat">
+<h3>100+</h3>
+<p>Students Trained</p>
+</div>
 
+<div class="stat">
+<h3>5+</h3>
+<p>Years Experience</p>
+</div>
 
+<div class="stat">
+<h3>99%</h3>
+<p>First Attempt Success</p>
+</div>
 
-<!-- ================= CSS ANIMATION ================= -->
-<style>
-@keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-scroll {
-  animation: scrollLeft 25s linear infinite;
-}
-</style>
-
-
-
-      </div>
-
-    </div>
-  </div>
 </section>
 
 
-<!-- ================= TRUST STATS ================= -->
-<section class="bg-black border-t border-[#D4AF37]/20 py-14">
-  <div class="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center items-center">
 
-    <div>
-      <h3 class="text-3xl font-bold text-[#D4AF37] counter" data-target="62">0</h3>
-      <p class="text-gray-400 mt-2">Google Reviews</p>
-    </div>
+<section class="instructor">
 
-    <div>
-      <h3 class="text-3xl font-bold text-[#D4AF37] counter" data-target="200">0</h3>
-      <p class="text-gray-400 mt-2">Drivers Trained</p>
-    </div>
+<h2>Meet Your Instructor</h2>
 
-    <div>
-      <h3 class="text-3xl font-bold text-[#D4AF37] counter" data-target="5">0</h3>
-      <p class="text-gray-400 mt-2">Years Experience</p>
-    </div>
+<p>
+I’m Niyad, a professional driving mentor dedicated to transforming road anxiety into complete driving confidence.
+</p>
 
-    <div>
-      <h3 class="text-3xl font-bold text-[#D4AF37] counter" data-target="100">0</h3>
-      <p class="text-gray-400 mt-2">First Attempt Success</p>
-    </div>
+<p>
+My experience includes handling a wide range of vehicles from luxury cars to heavy-duty vehicles, bringing deeper technical understanding and safety awareness to every session.
+</p>
 
-  </div>
+<p>
+At MasterDrive Kochi the goal is simple — help every learner become an independent, confident and responsible driver.
+</p>
+
 </section>
 
-<!-- ================= REVIEWS (COMPACT LOOPING) ================= -->
-<section class="bg-[#0B0B0F] py-8 overflow-hidden">
 
-  <div class="text-center mb-8">
-    <h2 class="text-3xl font-bold text-white">
-      What <span class="text-[#FF2E88]">Our Students Say</span>
-    </h2>
-    <p class="text-gray-400 mt-2 text-sm">Real Google Reviews</p>
-  </div>
 
-  <div class="relative overflow-hidden">
-    <div class="flex gap-3 animate-scroll w-max">
+<section class="services">
 
-      <!-- ===== ORIGINAL 7 REVIEWS ===== -->
+<h2>Premium Training Features</h2>
 
-      <div class="bg-[#111] min-w-[140px] p-3 rounded-lg border border-[#1f1f1f]">
-        <div class="text-[#D4AF37] mb-1 text-sm">★★★★★</div>
-        <p class="text-gray-300 text-xs leading-snug">
-          Calm training rebuilt my confidence step by step.
-          Structured sessions made driving simple and safe.
-        </p>
-        <span class="text-[10px] text-gray-500 mt-2 block">— Tabassum Unnisa</span>
-      </div>
+<ul>
 
-      <div class="bg-[#111] min-w-[140px] p-3 rounded-lg border border-[#1f1f1f]">
-        <div class="text-[#D4AF37] mb-1 text-sm">★★★★★</div>
-        <p class="text-gray-300 text-xs leading-snug">
-          His patience and clarity built real road confidence.
-          Highly recommended for nervous learners.
-        </p>
-        <span class="text-[10px] text-gray-500 mt-2 block">— Renju Raghav</span>
-      </div>
+<li>✔ One-on-one training in your own vehicle</li>
 
-      <div class="bg-[#111] min-w-[140px] p-3 rounded-lg border border-[#1f1f1f]">
-        <div class="text-[#D4AF37] mb-1 text-sm">★★★★★</div>
-        <p class="text-gray-300 text-xs leading-snug">
-          Perfect balance of theory and practical sessions.
-          Great experience for beginners.
-        </p>
-        <span class="text-[10px] text-gray-500 mt-2 block">— Dr. Asha Vijayan</span>
-      </div>
+<li>✔ Flexible coaching timings (7 AM – 6 PM)</li>
 
-      <div class="bg-[#111] min-w-[140px] p-3 rounded-lg border border-[#1f1f1f]">
-        <div class="text-[#D4AF37] mb-1 text-sm">★★★★★</div>
-        <p class="text-gray-300 text-xs leading-snug">
-          Very supportive and calm instructor.
-          I now drive independently with confidence.
-        </p>
-        <span class="text-[10px] text-gray-500 mt-2 block">— Anjali Menon</span>
-      </div>
+<li>✔ Home pickup and drop facility</li>
 
-      <div class="bg-[#111] min-w-[140px] p-3 rounded-lg border border-[#1f1f1f]">
-        <div class="text-[#D4AF37] mb-1 text-sm">★★★★★</div>
-        <p class="text-gray-300 text-xs leading-snug">
-          Excellent structured training sessions.
-          Helped me overcome fear completely.
-        </p>
-        <span class="text-[10px] text-gray-500 mt-2 block">— Nikhil Thomas</span>
-      </div>
+<li>✔ Coverage: Vyttila, Kakkanad, Aluva, Edappally & nearby areas</li>
 
-      <div class="bg-[#111] min-w-[140px] p-3 rounded-lg border border-[#1f1f1f]">
-        <div class="text-[#D4AF37] mb-1 text-sm">★★★★★</div>
-        <p class="text-gray-300 text-xs leading-snug">
-          Learned parking and traffic driving confidently.
-          Truly life-changing experience.
-        </p>
-        <span class="text-[10px] text-gray-500 mt-2 block">— Athira S</span>
-      </div>
+</ul>
 
-      <div class="bg-[#111] min-w-[140px] p-3 rounded-lg border border-[#1f1f1f]">
-        <div class="text-[#D4AF37] mb-1 text-sm">★★★★★</div>
-        <p class="text-gray-300 text-xs leading-snug">
-          Best driving training in Ernakulam.
-          100% recommend Good Drive.
-        </p>
-        <span class="text-[10px] text-gray-500 mt-2 block">— Jithin Raj</span>
-      </div>
-
-      <!-- ===== DUPLICATE SAME 7 FOR SMOOTH LOOP ===== -->
-
-      <div class="bg-[#111] min-w-[140px] p-3 rounded-lg border border-[#1f1f1f]">
-        <div class="text-[#D4AF37] mb-1 text-sm">★★★★★</div>
-        <p class="text-gray-300 text-xs leading-snug">
-          Calm training rebuilt my confidence step by step.
-          Structured sessions made driving simple and safe.
-        </p>
-        <span class="text-[10px] text-gray-500 mt-2 block">— Tabassum Unnisa</span>
-      </div>
-
-      <div class="bg-[#111] min-w-[140px] p-3 rounded-lg border border-[#1f1f1f]">
-        <div class="text-[#D4AF37] mb-1 text-sm">★★★★★</div>
-        <p class="text-gray-300 text-xs leading-snug">
-          His patience and clarity built real road confidence.
-          Highly recommended for nervous learners.
-        </p>
-        <span class="text-[10px] text-gray-500 mt-2 block">— Renju Raghav</span>
-      </div>
-
-      <!-- You can duplicate remaining cards again if needed -->
-
-    </div>
-  </div>
 </section>
 
-<!-- ================= SMOOTH SCROLL ANIMATION ================= -->
 
-    </div>
-  </div>
+
+<section class="syllabus">
+
+<h2>Driving Mastery Program</h2>
+
+<div class="syllabus-grid">
+
+<div class="card">
+<h3>Vehicle Awareness</h3>
+<p>Understand dashboard indicators, controls, safety systems and vehicle behaviour.</p>
+</div>
+
+<div class="card">
+<h3>Driving Control</h3>
+<p>Learn clutch balance, smooth acceleration, steering precision and gear coordination.</p>
+</div>
+
+<div class="card">
+<h3>Parking Mastery</h3>
+<p>Practice reverse parking, parallel parking and angle parking techniques confidently.</p>
+</div>
+
+<div class="card">
+<h3>Traffic Navigation</h3>
+<p>Drive safely through signals, junctions, roundabouts and real city traffic.</p>
+</div>
+
+<div class="card">
+<h3>Defensive Driving</h3>
+<p>Develop hazard awareness and responsible driving behaviour.</p>
+</div>
+
+</div>
+
 </section>
-<!-- ================= COUNTER SCRIPT ================= -->
-<script>
-(function() {
-    const counters = document.querySelectorAll('.counter');
-    const obs = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                const target = +counter.getAttribute('data-target');
-                let count = 0;
-                const inc = Math.ceil(target / 60);
-                const interval = setInterval(() => {
-                    count += inc;
-                    if (count >= target) {
-                        clearInterval(interval);
-                        counter.innerText = target + (target === 100 ? "%" : "+");
-                    } else {
-                        counter.innerText = count;
-                    }
-                }, 20);
-                observer.unobserve(counter);
-            }
-        });
-    }, { threshold: 0.5 });
 
-    counters.forEach(c => obs.observe(c));
-})();
-</script>
 
-{% endblock %}
+
+<section class="reviews">
+
+<h2>Student Experiences</h2>
+
+<div class="review-grid">
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+Very calm and professional coaching. I gained confidence within two sessions.
+</p>
+
+<span>
+– Arjun S
+</span>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+I finally overcame my traffic anxiety and now drive comfortably.
+</p>
+
+<span>
+– Neha Thomas
+</span>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+The one-on-one training approach makes learning extremely comfortable.
+</p>
+
+<span>
+– Faizal K
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<p>
+Address: Vyttila, Kochi
+</p>
+
+<div class="social">
+
+<a href="#">Instagram</a>
+
+<a href="#">Facebook</a>
+
+<a href="#">YouTube</a>
+
+</div>
+
+<p>
+© MasterDrive Kochi
+</p>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
