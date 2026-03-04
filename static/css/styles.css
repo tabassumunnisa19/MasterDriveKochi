@@ -921,3 +921,44 @@ color:#ff2a7f;
 margin-left:3px;
 }
 
+
+/* HEADER */
+
+.header{
+width:100%;
+background:#000;
+border-bottom:1px solid #111;
+padding:15px 40px;
+}
+
+.header-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* logo section */
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:bold;
+color:#f4c430;
+}
+
+.logo img{
+height:35px;
+}
+
+/* book button */
+
+.book-btn{
+background:#ff2a7f;
+color:#fff;
+padding:10px 22px;
+border-radius:25px;
+text-decoration:none;
+font-weight:600;
+}
