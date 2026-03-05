@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function(){
 const input = document.getElementById("chat-input");
 const chatBody = document.getElementById("chat-body");
 
+/* ================= CHATBOT ================= */
+
 if(input){
 
 input.addEventListener("keypress", function(e){
@@ -152,8 +154,8 @@ chatBody.scrollTop = chatBody.scrollHeight;
 
 }
 
-});
-document.addEventListener("DOMContentLoaded", function(){
+
+/* ================= COUNTER ANIMATION ================= */
 
 const counters = document.querySelectorAll(".counter");
 
@@ -186,3 +188,18 @@ updateCounter();
 });
 
 });
+
+
+/* ================= CHATBOT TOGGLE ================= */
+
+function toggleChat(){
+
+var chat = document.getElementById("chatbot");
+
+if(chat.style.display === "block"){
+chat.style.display = "none";
+}else{
+chat.style.display = "block";
+}
+
+}
