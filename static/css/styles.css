@@ -297,77 +297,78 @@ transform:translateX(-50%);
 
 /* ================= CHATBOT ================= */
 
-/* ================= CHATBOT ================= */
+/* ===== CHATBOT CONTAINER ===== */
 
-.chatbot{
+#chatbot{
 position:fixed;
-bottom:25px;
-right:25px;
-width:320px;
-background:#161616; /* different from website black */
-border-radius:14px;
-box-shadow:0 0 30px rgba(255,42,127,0.35);
+bottom:20px;
+right:20px;
+width:300px;
+background:#1c1c1c;
+border-radius:12px;
+box-shadow:0 0 25px rgba(255,42,127,0.4);
 overflow:hidden;
+z-index:9999;
 font-family:Arial, sans-serif;
-z-index:999;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 
-.chat-header{
+#chat-header{
 background:#ff2a7f;
 color:white;
-font-weight:bold;
 text-align:center;
 padding:12px;
+font-weight:bold;
 font-size:15px;
 }
 
-/* BODY */
+/* ===== BODY ===== */
 
-.chat-body{
-height:260px;
-padding:12px;
+#chat-body{
+height:220px;
 overflow-y:auto;
-background:#1b1b1b; /* slightly lighter than website */
+padding:10px;
+background:#222;
 display:flex;
 flex-direction:column;
 gap:8px;
 }
 
-/* BOT MESSAGE */
+/* ===== BOT MESSAGE ===== */
 
 .bot-message{
-background:#2a2a2a;
+background:#333;
 color:#eee;
-padding:8px 12px;
+padding:8px 10px;
 border-radius:8px;
 max-width:80%;
 font-size:14px;
 }
 
-/* USER MESSAGE */
+/* ===== USER MESSAGE ===== */
 
 .user-message{
 background:#ff2a7f;
 color:white;
-padding:8px 12px;
+padding:8px 10px;
 border-radius:8px;
 max-width:80%;
 align-self:flex-end;
 font-size:14px;
 }
 
-/* INPUT */
+/* ===== INPUT ===== */
 
 #chat-input{
 width:100%;
-padding:10px;
 border:none;
 outline:none;
-background:#0f0f0f;
+padding:10px;
+background:#111;
 color:white;
-border-top:1px solid #333;
+border-top:1px solid #444;
+font-size:14px;
 }
 
 /* ================= FOOTER ================= */
