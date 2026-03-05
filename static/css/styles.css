@@ -1150,3 +1150,29 @@ font-size:14px;
 color:white;
 text-align:right;
 }
+.floating-whatsapp{
+
+position:fixed;
+bottom:25px;
+right:100px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+z-index:999;
+}
+
+.floating-whatsapp img{
+
+width:32px;
+
+}
+#chatbot{
+position:fixed;
+bottom:100px;
+right:25px;
+}
