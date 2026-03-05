@@ -1139,3 +1139,14 @@ color:#ff2a7f;
 text-decoration:none;
 font-size:14px;
 }
+
+
+.user-message{
+background:#ff2c78;
+padding:10px;
+margin-bottom:10px;
+border-radius:8px;
+font-size:14px;
+color:white;
+text-align:right;
+}
