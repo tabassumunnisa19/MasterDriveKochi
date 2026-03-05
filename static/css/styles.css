@@ -59,7 +59,10 @@ transition:0.3s;
 .book-btn:hover{
 background:#ffaa00;
 }
-
+header{
+display:flex;
+justify-content:center;
+}
 
 /* ================= HERO ================= */
 
