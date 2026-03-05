@@ -161,19 +161,21 @@ const counters = document.querySelectorAll(".counter");
 
 counters.forEach(counter => {
 
-const target = parseInt(counter.getAttribute("data-target"));
-let count = 0;
+counter.innerText = "0";
 
 const updateCounter = () => {
 
-const increment = target / 100;
+const target = +counter.getAttribute("data-target");
 
-if(count < target){
+const current = +counter.innerText;
 
-count += increment;
-counter.innerText = Math.ceil(count);
+const increment = target / 200;
 
-requestAnimationFrame(updateCounter);
+if(current < target){
+
+counter.innerText = `${Math.ceil(current + increment)}`;
+
+setTimeout(updateCounter,10);
 
 }else{
 
@@ -186,9 +188,6 @@ counter.innerText = target;
 updateCounter();
 
 });
-
-});
-
 
 /* ================= CHATBOT TOGGLE ================= */
 
