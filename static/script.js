@@ -1,5 +1,3 @@
-// ================= CHATBOT =================
-
 document.addEventListener("DOMContentLoaded", function(){
 
 const input = document.getElementById("chat-input");
@@ -15,33 +13,136 @@ let msg = input.value.toLowerCase().trim();
 
 if(msg === "") return;
 
+
+/* USER MESSAGE */
+
 chatBody.innerHTML += `<div class="user-message">${msg}</div>`;
 
-let reply = "Please contact WhatsApp for booking.";
 
-if(msg.includes("price") || msg.includes("cost")){
-reply = "Each session costs ₹499 and lasts 1 hour.";
+let reply = `I'm here to help 🙂<br>
+You can ask about:<br>
+• Pricing<br>
+• Instructor details<br>
+• Address<br>
+• Session duration<br>
+• Booking`;
+
+
+/* GREETING */
+
+if(msg.includes("hi") || msg.includes("hello") || msg.includes("hey")){
+reply = `👋 Welcome to <b>MasterDrive Kochi</b>.<br><br>
+
+I can help you with:<br>
+
+• Pricing<br>
+• Instructor details<br>
+• Session duration<br>
+• Address<br>
+• Session booking<br><br>
+
+Just type your question 🙂`;
 }
 
-else if(msg.includes("instructor")){
-reply = "Instructor Mr. Niyad has 5+ years experience and has trained 100+ students.";
+
+/* PRICING */
+
+else if(msg.includes("price") || msg.includes("cost") || msg.includes("pricing")){
+reply = `💰 <b>Pricing Details</b><br><br>
+
+Each driving session costs:<br>
+
+<b>₹499 per session</b><br><br>
+
+Session duration:<br>
+• 1 Hour professional driving training<br>
+• One-on-one instructor guidance<br>
+• Practical road experience`;
 }
 
-else if(msg.includes("address") || msg.includes("location")){
-reply = "We operate from Vyttila, Kochi.";
+
+/* SESSION TIME */
+
+else if(msg.includes("duration") || msg.includes("time") || msg.includes("session")){
+reply = `⏱ <b>Session Duration</b><br><br>
+
+Each training session lasts <b>1 hour</b>.<br><br>
+
+During the session you will learn:<br>
+
+• Basic driving techniques<br>
+• Traffic awareness<br>
+• Confidence building for beginners`;
 }
 
-else if(msg.includes("procedure")){
-reply = "Share your location and the instructor will come to your home, conduct the session and drop you safely.";
+
+/* INSTRUCTOR */
+
+else if(msg.includes("instructor") || msg.includes("trainer") || msg.includes("teacher")){
+reply = `👨‍🏫 <b>Instructor Details</b><br><br>
+
+Our instructor is an experienced trainer based in <b>Vyttila, Kochi</b>.<br><br>
+
+Students appreciate the instructor for:<br>
+
+• Very patient teaching style<br>
+• Clear step-by-step explanations<br>
+• Helping beginners gain confidence quickly<br><br>
+
+Many students feel comfortable driving within just a few sessions.`;
 }
 
-else if(msg.includes("book")){
-reply = "Please click the Book Now button or contact via WhatsApp.";
+
+/* ADDRESS */
+
+else if(msg.includes("address") || msg.includes("location") || msg.includes("where")){
+reply = `📍 <b>Address</b><br><br>
+
+MasterDrive Kochi<br>
+Vyttila, Kochi<br><br>
+
+Driving sessions are conducted in safe and beginner-friendly roads around the area.`;
 }
+
+
+/* PROCEDURE */
+
+else if(msg.includes("procedure") || msg.includes("how")){
+reply = `🚗 <b>Training Procedure</b><br><br>
+
+• Share your location<br>
+• Instructor arrives at your home<br>
+• Conducts the driving session<br>
+• Drops you safely after training`;
+}
+
+
+/* BOOKING */
+
+else if(msg.includes("book") || msg.includes("slot") || msg.includes("appointment")){
+reply = `📅 <b>Session Booking</b><br><br>
+
+⚠️ Limited slots available.<br><br>
+
+To reserve your session quickly:<br><br>
+
+<a href="https://wa.me/917994065904" target="_blank" style="color:#ff2c78;font-weight:bold;">
+Chat on WhatsApp
+</a>`;
+}
+
+
+/* BOT MESSAGE */
 
 chatBody.innerHTML += `<div class="bot-message">${reply}</div>`;
 
+
+/* RESET INPUT */
+
 input.value = "";
+
+
+/* AUTO SCROLL */
 
 chatBody.scrollTop = chatBody.scrollHeight;
 
@@ -51,8 +152,8 @@ chatBody.scrollTop = chatBody.scrollHeight;
 
 }
 
-
-// ================= STATS COUNTER =================
+});
+// document.addEventListener("DOMContentLoaded", function(){
 
 const counters = document.querySelectorAll(".counter");
 
@@ -81,5 +182,7 @@ counter.innerText = target;
 };
 
 updateCounter();
+
+});
 
 });
