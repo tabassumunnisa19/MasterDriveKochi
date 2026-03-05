@@ -22,11 +22,10 @@ padding:15px 0;
 box-shadow:0 2px 10px rgba(0,0,0,0.4);
 }
 
-
-
-.navbar{
+.header-container{
 width:90%;
 max-width:1200px;
+margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -58,10 +57,6 @@ transition:0.3s;
 
 .book-btn:hover{
 background:#ffaa00;
-}
-header{
-display:flex;
-justify-content:center;
 }
 
 /* ================= HERO ================= */
