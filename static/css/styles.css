@@ -1176,3 +1176,14 @@ position:fixed;
 bottom:100px;
 right:25px;
 }
+#chatbot{
+display:none;
+position:fixed;
+bottom:90px;
+right:25px;
+width:320px;
+background:#1e1e1e;
+border-radius:12px;
+box-shadow:0 0 25px rgba(255,42,127,0.35);
+z-index:9999;
+}
