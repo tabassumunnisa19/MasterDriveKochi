@@ -189,24 +189,29 @@ chatBody.scrollTop = chatBody.scrollHeight;
    This animates numbers like 0 → 100
 ===================================================== */
 
+/* =====================================================
+   STATS COUNTER ANIMATION
+   Animates numbers smoothly from 0 → target
+===================================================== */
+
 const counters = document.querySelectorAll(".counter");
 
 counters.forEach(counter => {
 
-counter.innerText = "0";
+const target = parseInt(counter.getAttribute("data-target"));
+let current = 0;
 
-const updateCounter = () => {
+const speed = 200;   // bigger = slower animation
+const increment = target / speed;
 
-const target = +counter.getAttribute("data-target");
-const current = +counter.innerText;
-
-const increment = target / 120;
+function updateCounter(){
 
 if(current < target){
 
-counter.innerText = Math.ceil(current + increment);
+current += increment;
+counter.innerText = Math.ceil(current);
 
-setTimeout(updateCounter,10);
+requestAnimationFrame(updateCounter);
 
 }else{
 
@@ -214,7 +219,7 @@ counter.innerText = target;
 
 }
 
-};
+}
 
 updateCounter();
 
