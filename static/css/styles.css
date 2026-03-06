@@ -1110,7 +1110,9 @@ padding:8px;
 border-radius:6px;
 margin-bottom:8px;
 }
-
+.review-stars i{
+color:#FFD700;
+}
 .user{
 background:#ff2a7f;
 padding:8px;
