@@ -1,21 +1,36 @@
+/* =====================================================
+   CHATBOT OPEN / CLOSE FUNCTION
+   This function runs when the robot icon is clicked
+===================================================== */
 
 function toggleChat(){
 
-const chatbot = document.getElementById("chatbot");
+const chat = document.getElementById("chatbot");
 
-if(chatbot.style.display === "block"){
-chatbot.style.display = "none";
+if(chat.style.display === "block"){
+chat.style.display = "none";
 }else{
-chatbot.style.display = "block";
+chat.style.display = "block";
 }
 
 }
+
+
+/* =====================================================
+   WAIT UNTIL PAGE LOADS
+   This ensures HTML elements exist before JS runs
+===================================================== */
+
 document.addEventListener("DOMContentLoaded", function(){
 
 const input = document.getElementById("chat-input");
 const chatBody = document.getElementById("chat-body");
 
-/* ================= CHATBOT ================= */
+
+/* =====================================================
+   CHATBOT MESSAGE SYSTEM
+   When user presses ENTER the bot responds
+===================================================== */
 
 if(input){
 
@@ -28,10 +43,12 @@ let msg = input.value.toLowerCase().trim();
 if(msg === "") return;
 
 
-/* USER MESSAGE */
+/* ================= USER MESSAGE ================= */
 
 chatBody.innerHTML += `<div class="user-message">${msg}</div>`;
 
+
+/* ================= DEFAULT REPLY ================= */
 
 let reply = `I'm here to help 🙂<br>
 You can ask about:<br>
@@ -42,7 +59,7 @@ You can ask about:<br>
 • Booking`;
 
 
-/* GREETING */
+/* ================= GREETING ================= */
 
 if(msg.includes("hi") || msg.includes("hello") || msg.includes("hey")){
 reply = `👋 Welcome to <b>MasterDrive Kochi</b>.<br><br>
@@ -59,7 +76,7 @@ Just type your question 🙂`;
 }
 
 
-/* PRICING */
+/* ================= PRICING ================= */
 
 else if(msg.includes("price") || msg.includes("cost") || msg.includes("pricing")){
 reply = `💰 <b>Pricing Details</b><br><br>
@@ -75,7 +92,7 @@ Session duration:<br>
 }
 
 
-/* SESSION TIME */
+/* ================= SESSION TIME ================= */
 
 else if(msg.includes("duration") || msg.includes("time") || msg.includes("session")){
 reply = `⏱ <b>Session Duration</b><br><br>
@@ -90,7 +107,7 @@ During the session you will learn:<br>
 }
 
 
-/* INSTRUCTOR */
+/* ================= INSTRUCTOR ================= */
 
 else if(msg.includes("instructor") || msg.includes("trainer") || msg.includes("teacher")){
 reply = `👨‍🏫 <b>Instructor Details</b><br><br>
@@ -107,7 +124,7 @@ Many students feel comfortable driving within just a few sessions.`;
 }
 
 
-/* ADDRESS */
+/* ================= ADDRESS ================= */
 
 else if(msg.includes("address") || msg.includes("location") || msg.includes("where")){
 reply = `📍 <b>Address</b><br><br>
@@ -119,7 +136,7 @@ Driving sessions are conducted in safe and beginner-friendly roads around the ar
 }
 
 
-/* PROCEDURE */
+/* ================= PROCEDURE ================= */
 
 else if(msg.includes("procedure") || msg.includes("how")){
 reply = `🚗 <b>Training Procedure</b><br><br>
@@ -131,7 +148,7 @@ reply = `🚗 <b>Training Procedure</b><br><br>
 }
 
 
-/* BOOKING */
+/* ================= BOOKING ================= */
 
 else if(msg.includes("book") || msg.includes("slot") || msg.includes("appointment")){
 reply = `📅 <b>Session Booking</b><br><br>
@@ -146,17 +163,17 @@ Chat on WhatsApp
 }
 
 
-/* BOT MESSAGE */
+/* ================= BOT MESSAGE ================= */
 
 chatBody.innerHTML += `<div class="bot-message">${reply}</div>`;
 
 
-/* RESET INPUT */
+/* ================= CLEAR INPUT ================= */
 
 input.value = "";
 
 
-/* AUTO SCROLL */
+/* ================= AUTO SCROLL ================= */
 
 chatBody.scrollTop = chatBody.scrollHeight;
 
@@ -167,7 +184,10 @@ chatBody.scrollTop = chatBody.scrollHeight;
 }
 
 
-/* ================= COUNTER ANIMATION ================= */
+/* =====================================================
+   STATS COUNTER ANIMATION
+   This animates numbers like 0 → 100
+===================================================== */
 
 const counters = document.querySelectorAll(".counter");
 
@@ -178,14 +198,13 @@ counter.innerText = "0";
 const updateCounter = () => {
 
 const target = +counter.getAttribute("data-target");
-
 const current = +counter.innerText;
 
-const increment = target / 200;
+const increment = target / 120;
 
 if(current < target){
 
-counter.innerText = `${Math.ceil(current + increment)}`;
+counter.innerText = Math.ceil(current + increment);
 
 setTimeout(updateCounter,10);
 
@@ -201,16 +220,4 @@ updateCounter();
 
 });
 
-/* ================= CHATBOT TOGGLE ================= */
-
-function toggleChat(){
-
-var chat = document.getElementById("chatbot");
-
-if(chat.style.display === "block"){
-chat.style.display = "none";
-}else{
-chat.style.display = "block";
-}
-
-}
+});
