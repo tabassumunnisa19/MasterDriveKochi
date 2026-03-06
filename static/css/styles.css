@@ -81,9 +81,9 @@ align-items:center;
 gap:60px;
 }
 
-.hero-image img{
-width:420px;
-max-width:100%;
+.hero img{
+width:520px;
+border-radius:12px;
 }
 
 .hero-text{
