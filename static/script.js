@@ -1,3 +1,15 @@
+
+function toggleChat(){
+
+const chatbot = document.getElementById("chatbot");
+
+if(chatbot.style.display === "block"){
+chatbot.style.display = "none";
+}else{
+chatbot.style.display = "block";
+}
+
+}
 document.addEventListener("DOMContentLoaded", function(){
 
 const input = document.getElementById("chat-input");
